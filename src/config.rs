@@ -3,9 +3,10 @@ use serde::Deserialize;
 use serde_with::serde_as;
 
 #[serde_as]
-#[derive(Deserialize)]
+#[derive(Deserialize, Clone)]
 pub struct AppConfig {
     pub yral_metadata_token: String,
+    pub redis_url: String
 }
 
 impl AppConfig {
